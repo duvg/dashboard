@@ -26,11 +26,11 @@ export default function Sidebar() {
                     <nav className={styles.sidebarNav}>
                         <ul>
                             {sidebarNavLinks.map(sidebarNavLink => (
-                                <li className={styles.sidebarNavItem}>
+                                <li className={styles.sidebarNavItem} key={ sidebarNavLink }>
                                     <Link
                                         className={
                                             location.pathname === `/${sidebarNavLink}`
-                                                ? styles.sidebarNavLinkactive
+                                                ? styles.sidebarNavLinkActive
                                                 : styles.sidebarNavLink
                                         }
                                         to={`/${sidebarNavLink}`}
